@@ -1,10 +1,12 @@
+
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/cartSlice';
 
+
 export const DetailComp = ({ productDetail }) => {
     const dispatch = useDispatch();
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     const decrement = () => {
         if (quantity > 0)
@@ -17,7 +19,7 @@ export const DetailComp = ({ productDetail }) => {
     }
 
     const addCart = () => {
-        dispatch(addToCart({id: productDetail?.id , title: productDetail?.title, image: productDetail?.image, quantity: quantity, price: productDetail?.price }))
+        dispatch(addToCart({ id: productDetail?.id, title: productDetail?.title, image: productDetail?.image, quantity: quantity, price: productDetail?.price }))
     }
 
     return (
@@ -28,7 +30,7 @@ export const DetailComp = ({ productDetail }) => {
                 <div className='my-2'>{productDetail?.description}</div>
                 <div className='my-2 text-xl text-red-500'>Raiting :{productDetail?.rating?.rate}</div>
                 <div className='my-2 text-xl text-red-500'>Count :{productDetail?.rating?.count}</div>
-                <div className='my-2 text-4xl font-bold'>{productDetail?.price} <span className='text-sm'>$</span></div>
+                <div className='my-2 text-4xl font-bold'>{productDetail?.price} <span className='text-lg'>$</span></div>
                 <div className='flex items-center gap-5 my-5 '>
                     <div onClick={decrement} className='text-4xl cursor-pointer border px-2'>-</div>
                     <input className='w-5 text-center text-3xl font-bold' type="text" value={quantity} />

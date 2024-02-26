@@ -6,35 +6,56 @@ import CartComp from '../components/cart/CartComp'
 
 
 const Cart = () => {
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const { carts, totalAmount, itemCount } = useSelector(state => state.carts)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const { carts, totalAmount, itemCount } = useSelector(state => state.carts)
 
-    console.log(carts, totalAmount, itemCount, 'carts');
+  console.log(carts, totalAmount, itemCount, 'carts');
 
-    useEffect(() => {
-        dispatch(getCartTotal())
-    }, [dispatch])
-    return (
-        <div>
-          {
-            carts?.length > 0 ? (
-              <div>
-                {
-                  carts.map((cart, index) => (
-                    <CartComp key={index} cart={cart} />
-                  ))
-                }
-                <div className='flex items-center justify-end text-xl'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
-              </div>
-            ) : (
-              <div>
-                Cart is empty...
-              </div>
-            )
-          }
+  useEffect(() => {
+    dispatch(getCartTotal())
+  }, [dispatch])
+  return (
+    <div>
+      <div className=''>
+        <div className='text-4xl font-bold py-2'>Shopping Cart</div>
+        {
+          carts?.length > 0 ? (
+            <div>
+              {
+                carts.map((cart, index) => (
+                  <CartComp key={index} cart={cart} />
+                ))
+              }
+              <div className='flex items-center justify-end text-xl'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
+            </div>
+          ) : (
+            <div>
+              Cart is empty...
+            </div>
+          )
+        }
+        <div className='border w-[500px] h-[400px] p-4 bg-gray-100'>
+          <div className='p-3 mb-2 border-b text-2xl font-bold'>Summary</div>
+          <div className='p-4 text-2xl'>Items {itemCount} </div>
+          <div className='flex flex-col p-4'>
+            <label className='text-xl'>Shipping</label>
+            <select name="shipping" id="shipping" className='h-10 border p-2'>
+              <option value="delivery">Standard-Delivery- $5.00</option>
+              <option value="delivery">Two</option>
+              <option value="delivery">Three</option>
+              <option value="delivery">Four</option>
+            </select>
+          </div>
+          <div className='flex flex-col w-[200px] p-4'>
+            <label className='text-xl'>Give Code</label>
+            <input type="text" placeholder='Enter your code' className='h-10 border p-2 ' />
+          </div>
+          <div className='text-2xl p-4 font-bold'>Total Price {totalAmount} $</div>
         </div>
-      );
+      </div>
+    </div>
+  );
 }
 
 export default Cart
