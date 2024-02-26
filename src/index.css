@@ -25,20 +25,24 @@ body {
   justify-content: center;
 }
 
-.category{
+.category {
   background-color: #C0C0C0;
 }
-.add:hover{
+
+.add:hover {
   background-color: #ccd5ae;
 }
+
 .price,
-.view{
- background-color: #ccd5ae;
+.view {
+  background-color: #ccd5ae;
 }
-.logo{
+
+.logo {
   color: #bcc59e;
 }
-.category{
+
+.category {
   font-family: "Raleway", sans-serif;
   color: #F7F7F7;
 }
@@ -52,6 +56,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 77;
 }
+
 .cartItem {
   position: fixed;
   top: 0;
@@ -63,15 +68,18 @@ body {
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
   z-index: 88;
 }
-/* .cardhide {
+
+.cardhide {
   display: none;
-} */
+}
 .cartItem .title .icon {
   font-size: 25px;
 }
+
 .emptyCard {
   text-align: center;
 }
+
 .emptyCard img {
   width: 70%;
   margin: auto;
@@ -82,6 +90,7 @@ body {
   margin: 40px 0;
   display: flex;
 }
+
 .cartContent .img {
   width: 105px;
   height: 105px;
@@ -89,6 +98,7 @@ body {
   position: relative;
   margin-right: 20px;
 }
+
 .cartContent .img::after {
   content: "";
   position: absolute;
@@ -116,19 +126,23 @@ body {
   opacity: 0;
   transition: 0.5s;
 }
+
 .cartContent:hover .img::after,
 .cartContent:hover .remove {
   opacity: 1;
   cursor: pointer;
 }
+
 .cartContent img {
   width: 100%;
   height: 100%;
 }
+
 .cartContent .details label {
   display: block;
   margin: 10px 0;
 }
+
 .cartContent .details .qty {
   background-color: #212121;
   border-radius: 5px;
@@ -142,25 +156,84 @@ body {
   color: #fff;
   transition: 0.5s;
 }
+
 .cartContent .priceCart {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
+
 .cartContent .priceCart .num {
   font-size: 17px;
 }
+
 .plus {
   border-radius: 5px 0 0 5px;
 }
+
 .minus {
   border-radius: 0 5px 5px 0;
 }
+
 .cartContent .details .minus:hover,
 .cartContent .details .plus:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 .cartContent .price .priceTitle {
   font-size: 15px;
 }
 
+
+@media screen and (max-width: 700px) {
+.search,
+.like-icon{
+  display: none;
+}
+.detail_img{
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+}
+.detail_title{
+  font-size: 1.5rem;
+}
+.detail_desc{
+  display: none;
+}
+.detail_rate,
+.detail_count,
+.detail_price{
+  font-size: 1rem;
+}
+.inc,
+.dec,
+.count,
+.categories{
+  font-size: 1rem;
+}
+.add_btn{
+  width: 150px;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+
+}
+.slider-title,
+.slider-text,
+.slider-btn{
+  display: none;
+}
+.slider{
+  width: 100%;
+}
+.slider_cover{
+  width: 900px;
+}
+.product_field{
+  width: 200px;
+}
+.category{
+  padding: 8px;
+}
+}

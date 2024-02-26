@@ -35,8 +35,8 @@ const Cart = () => {
             </div>
           )
         }
-        <div className='border w-[500px] h-[400px] p-4 bg-gray-100'>
-          <div className='p-3 mb-2 border-b text-2xl font-bold'>Summary</div>
+        <div className='border w-[500px] h-[480px] p-5 bg-gray-100 flex flex-col justify-center'>
+          <div className='p-3 mb-2 border-b text-2xl font-bold my-4'>Summary</div>
           <div className='p-4 text-2xl'>Items {itemCount} </div>
           <div className='flex flex-col p-4'>
             <label className='text-xl'>Shipping</label>
@@ -52,6 +52,10 @@ const Cart = () => {
             <input type="text" placeholder='Enter your code' className='h-10 border p-2 ' />
           </div>
           <div className='text-2xl p-4 font-bold'>Total Price {totalAmount} $</div>
+          <div className='p-4'>
+            <div className='border bg-black p-2 w-[200px] shadow-lg text-white rounded text-center '> Register</div>
+          </div>
+
         </div>
       </div>
     </div>

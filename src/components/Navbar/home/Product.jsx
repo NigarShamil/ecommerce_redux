@@ -22,7 +22,7 @@ const Product = ({ product }) => {
     
 
     return (
-        <div onClick={() => navigate(`products/${product?.id}`)} className='w-[280px] p-3 mb-5 mx-5 border rounded-md relative cursor-pointer shadow-lg '>
+        <div onClick={() => navigate(`products/${product?.id}`)} className='product_field w-[280px] p-3 mb-5 mx-5 border rounded-md relative cursor-pointer shadow-lg '>
             <div className=' price text-2xl font-bold absolute rounded-md top-0 right-0 p-2 m-1'>{product?.price} <span className='text-sm'>$</span></div>
             <img className='w-[160px] h-[200px] object-fill m-auto' src={product?.image} alt="" />
             <div className='text-center px-3 mt-3 text-lg font-bold '>{product?.title}</div>

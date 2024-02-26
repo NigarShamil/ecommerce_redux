@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between my-5'>
       <NavbarLeft />
       <NavbarRight setCartOpen={setCartOpen} />
-      <MiniCart cartOpen={cartOpen} setCartOpen={setCartOpen} />
+      {/* <MiniCart cartOpen={cartOpen} setCartOpen={setCartOpen} /> */}
     </div>
   )
 }
