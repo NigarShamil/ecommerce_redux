@@ -35,7 +35,7 @@ const Cart = () => {
             </div>
           )
         }
-        <div className='border w-[500px] h-[480px] p-5 bg-gray-100 flex flex-col justify-center'>
+        <div className='checkout border w-[500px] h-[480px] p-5 bg-gray-100 flex flex-col justify-center'>
           <div className='p-3 mb-2 border-b text-2xl font-bold my-4'>Summary</div>
           <div className='p-4 text-2xl'>Items {itemCount} </div>
           <div className='flex flex-col p-4'>

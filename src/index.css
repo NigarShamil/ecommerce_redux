@@ -236,4 +236,25 @@ body {
 .category{
   padding: 8px;
 }
+.cartText_field{
+  width: 300px;
+}
+.cart_price,
+.cart_count,
+.cart_title{
+  font-size: 1rem;
+}
+.cartText_field{
+  display: flex;
+  justify-content: center;
+}
+.cartField{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.checkout{
+  width: 300px;
+}
+
 }
