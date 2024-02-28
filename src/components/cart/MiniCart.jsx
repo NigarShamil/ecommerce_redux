@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { AiOutlineClose } from "react-icons/ai"
 import MiniCartComp from './MiniCartComp'
 import { getCartTotal } from '../../redux/cartSlice'
 
-export const MiniCart = () => {
-  const [cartOpen, setCartOpen] = useState(false)
+export const MiniCart = ({cartOpen, setCartOpen}) => {
+  // const [cartOpen, setCartOpen] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { carts, totalAmount, itemCount } = useSelector(state => state.carts)
@@ -27,7 +27,7 @@ export const MiniCart = () => {
 
       <div className={cartOpen ? "cartItem" : "cardhide"}>
         <div className='title flex'>
-          <h2>Shopping Cart</h2>
+          {/* <h2>Shopping Cart</h2> */}
           <button onClick={closeCart}>
             <AiOutlineClose className='icon' />
           </button>

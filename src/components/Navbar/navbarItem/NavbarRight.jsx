@@ -13,9 +13,9 @@ const NavbarRight = () => {
     const { itemCount } = useSelector(state => state.carts)
 
     const toggleCart = () => {
-        setCartOpen(prevState => !prevState); 
+        setCartOpen(prevState => !prevState);
     };
-   
+
     useEffect(() => {
         dispatch(getCartTotal())
     }, [dispatch])
@@ -29,8 +29,8 @@ const NavbarRight = () => {
             <div onClick={() => toggleCart()} className='relative cartIcon'>
                 <div className='absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center'>{itemCount}</div>
                 <SlBasket size={25} className=' icons cursor-pointer' />
-                 <MiniCart cartOpen={cartOpen} setCartOpen={setCartOpen} />
             </div>
+            <MiniCart cartOpen={cartOpen} setCartOpen={setCartOpen} />
         </div>
     )
 }

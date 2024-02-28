@@ -27,7 +27,7 @@ const Cart = () => {
                   <CartComp key={index} cart={cart} />
                 ))
               }
-              <div className='flex items-center justify-end text-xl'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
+              <div className='flex items-center justify-end text-xl border-t py-3'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
             </div>
           ) : (
             <div>
