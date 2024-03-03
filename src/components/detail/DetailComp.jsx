@@ -8,6 +8,7 @@ export const DetailComp = ({ productDetail }) => {
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(1)
 
+
     const decrement = () => {
         if (quantity > 0)
             setQuantity(quantity - 1)
@@ -22,9 +23,13 @@ export const DetailComp = ({ productDetail }) => {
         dispatch(addToCart({ id: productDetail?.id, title: productDetail?.title, image: productDetail?.image, quantity: quantity, price: productDetail?.price }))
     }
 
+ 
+
+
+
     return (
         <div className='detailField flex gap-10 my-10'>
-            <img className='detail_img w-[400px] h-[400px] object-cover' src={productDetail?.image} alt="" />
+            <img className='detail_img w-[400px] h-[400px] object-fill' src={productDetail?.image} alt="" />
             <div className=''>
                 <div className='detail_title text-3xl font-bold'>{productDetail?.title}</div>
                 <div className='detail_desc my-2 text-wrap'>{productDetail?.description}</div>

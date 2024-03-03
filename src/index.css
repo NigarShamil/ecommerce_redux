@@ -239,13 +239,13 @@ body {
   }
 
   .product_field {
-    width: 200px;
+    width: 210px;
   }
 
   .category {
     padding: 8px;
   }
-
+ 
   .cartText_field {
     width: 300px;
   }
@@ -319,7 +319,7 @@ body {
   }
 
   .cartContent .img::after {
-    width: 90px;
+    width: 100px;
     height: 110px;
   }
 
@@ -357,10 +357,8 @@ body {
   width: 170px;
 }
 }
-@media screen and (max-width: 1400px) and (min-width: 1900px){
+@media screen and (max-width: 1500px) and (min-width: 1900px){
   .product_field{
     width: 360px;
-    padding-right: 3rem;
-    padding-left: 3rem;
   }
 }
