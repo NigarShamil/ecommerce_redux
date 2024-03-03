@@ -23,7 +23,7 @@ export const DetailComp = ({ productDetail }) => {
     }
 
     return (
-        <div className='flex gap-10 my-10'>
+        <div className='detailField flex gap-10 my-10'>
             <img className='detail_img w-[400px] h-[400px] object-cover' src={productDetail?.image} alt="" />
             <div className=''>
                 <div className='detail_title text-3xl font-bold'>{productDetail?.title}</div>

@@ -16,7 +16,7 @@ export const Products = ({category, sort}) => {
     // Simulate fetching items from another resources.
     // (This could be items from props; or items loaded in a local state
     // from an API endpoint with useEffect and useState)
-    const itemsPerPage = 6
+    const itemsPerPage = 9
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = products.slice(itemOffset, endOffset);

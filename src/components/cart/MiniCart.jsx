@@ -40,7 +40,7 @@ export const MiniCart = ({cartOpen, setCartOpen}) => {
                   <MiniCartComp key={index} cart={cart} />
                 ))
               }
-              <div className='flex items-center justify-end text-xl'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
+              <div className='priceTitle flex items-center justify-end text-xl'>Total Price: <span className='font-bold text-2xl ml-2'>{totalAmount} $</span></div>
             </div>
           ) : (
             <div>
@@ -48,8 +48,8 @@ export const MiniCart = ({cartOpen, setCartOpen}) => {
             </div>
           )
         }
-        <div className=" flex gap-2 justify-end mt-4">
-          <div className=' view border p-2 bg-stone-200 w-[90px] text-center cursor-pointer  rounded' onClick={() => navigate('cart')}>View</div>
+        <div className=" flex justify-center mt-4">
+          <div className=' view border p-2 bg-stone-200 w-[390px] text-center cursor-pointer  rounded' onClick={() => navigate('cart')}>View</div>
         </div>
       </div>
 
