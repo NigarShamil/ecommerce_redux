@@ -22,9 +22,7 @@ export const MiniCart = ({cartOpen, setCartOpen}) => {
     dispatch(getCartTotal())
   }, [dispatch])
   return (
-    <div>
-      {/* <div className={cartOpen ? "overlay" : "nonoverlay"}></div> */}
-
+    <div className='cart'>
       <div className={cartOpen ? "cartItem" : "cardhide"}>
         <div className='title flex'>
           {/* <h2>Shopping Cart</h2> */}
@@ -48,8 +46,8 @@ export const MiniCart = ({cartOpen, setCartOpen}) => {
             </div>
           )
         }
-        <div className=" flex justify-center mt-4">
-          <div className=' view border p-2 bg-stone-200 w-[390px] text-center cursor-pointer  rounded' onClick={() => navigate('cart')}>View</div>
+        <div className=" flex justify-center mt-4 absolute ">
+          <div className=' view border p-2 bg-stone-200 w-[360px] text-center  cursor-pointer  rounded' onClick={() => navigate('cart')}>View</div>
         </div>
       </div>
 
